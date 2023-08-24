@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour
 
     public Rigidbody2D rb;  
     public float velocidad;
+    public float velocidadControles;
     public float salto;
     public LayerMask capaSuelo;
     public AudioClip sonidoMovimiento;
@@ -105,13 +106,13 @@ public class PlayerScript : MonoBehaviour
     {
         if (isLeft)
         {
-            rb.AddForce(new Vector2(-velocidad, 0) * Time.deltaTime);
+            rb.AddForce(new Vector2(-velocidadControles, 0) * Time.deltaTime);
             // audioManager.ReproducirSonido(sonidoMovimiento);
         }
 
         if (isRight)
         {
-            rb.AddForce(new Vector2(velocidad, 0) * Time.deltaTime);
+            rb.AddForce(new Vector2(velocidadControles, 0) * Time.deltaTime);
             // audioManager.ReproducirSonido(sonidoMovimiento);
         }
 

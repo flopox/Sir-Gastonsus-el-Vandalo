@@ -17,13 +17,20 @@ public class ControladorEnemigos : MonoBehaviour
     private float tiempoSiguienteEnemigo;
 
     private void Start()
+{
+    if (puntos.Length > 0)
     {
         maxX = puntos.Max(punto => punto.position.x);
         minX = puntos.Min(punto => punto.position.x);
         maxY = puntos.Max(punto => punto.position.y);
         minY = puntos.Min(punto => punto.position.y);
-
     }
+    else
+    {
+        Debug.LogWarning("No se encontraron puntos en el array 'puntos'.");
+    }
+}
+
 
 
     private void Update()
