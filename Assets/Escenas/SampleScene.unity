@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 60852709}
   m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 283811569}
   m_Layer: 0
   m_Name: PlataformaconMovimiento
-  m_TagString: Untagged
+  m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4409,7 +4409,7 @@ MonoBehaviour:
   - {fileID: 339796531}
   enemigos:
   - {fileID: 2866053796379938101, guid: bdda9e34f6489c845befd1a8cb71586d, type: 3}
-  TiempoEnemigos: 3
+  TiempoEnemigos: 1
 --- !u!4 &1369249813
 Transform:
   m_ObjectHideFlags: 0
@@ -4506,7 +4506,7 @@ GameObject:
   - component: {fileID: 1713943195}
   m_Layer: 0
   m_Name: PlataformaMov
-  m_TagString: Untagged
+  m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36283,6 +36283,10 @@ PrefabInstance:
     - target: {fileID: 2866053796379938057, guid: bdda9e34f6489c845befd1a8cb71586d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866053796379938059, guid: bdda9e34f6489c845befd1a8cb71586d, type: 3}
+      propertyPath: step
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2866053796379938100, guid: bdda9e34f6489c845befd1a8cb71586d, type: 3}
       propertyPath: m_Material
