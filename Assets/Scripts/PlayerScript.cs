@@ -33,14 +33,14 @@ public class PlayerScript : MonoBehaviour
         {
             isFloor = true;
         }
-    }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Piso")
-        {
-            isFloor = false;
-        }
-    }
+     }
+    // void OnCollisionExit2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.tag == "Piso")
+    //     {
+    //         isFloor = false;
+    //     }
+    // }
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -52,8 +52,6 @@ public class PlayerScript : MonoBehaviour
         {
             ClickJump();
         }
-        MovimientoH();
-        SaltarY();
     }
 
     public void clickLeft()
@@ -84,7 +82,6 @@ public class PlayerScript : MonoBehaviour
 
     public void ClickJump()
     {
-    
         if (isFloor)
         {
             isFloor = false;
@@ -123,33 +120,28 @@ public class PlayerScript : MonoBehaviour
             audioManager.ReproducirSonido(sonidoSalto);
         }
     }
-    void SaltarY()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ClickJump();
-        }
-    }
 
-    void MovimientoH()
-    {
-        float inputMovimiento = Input.GetAxis("Horizontal");
 
-        if (inputMovimiento != 0f)
-        {
-            rb.velocity = new Vector2(inputMovimiento * velocidad, rb.velocity.y);
+//     void MovimientoH()
+//     {
+//         float inputMovimiento = Input.GetAxis("Horizontal");
 
-            Orientacion(inputMovimiento);
+//         if (inputMovimiento != 0f)
+//         {
+//             rb.velocity = new Vector2(inputMovimiento * velocidad, rb.velocity.y);
 
-            audioManager.ReproducirSonido(sonidoMovimiento);
+//             Orientacion(inputMovimiento);
 
-//            animator.SetBool("isRunning", true );
-        }
-        else
-        {
-//            animator.SetBool("isRunning", false );
-        }
-    }
+//             audioManager.ReproducirSonido(sonidoMovimiento);
+
+// //            animator.SetBool("isRunning", true );
+//         }
+//         else
+//         {
+// //            animator.SetBool("isRunning", false );
+//         }
+//     }
+
      void Orientacion(float inputMovimiento)
     {
         if ((mirandoDerecha == false && inputMovimiento < 0) || (mirandoDerecha == true && inputMovimiento > 0))
