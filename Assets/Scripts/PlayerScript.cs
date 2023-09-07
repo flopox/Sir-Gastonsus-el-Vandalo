@@ -33,14 +33,12 @@ public class PlayerScript : MonoBehaviour
         {
             isFloor = true;
         }
+        else if(collision.gameObject.tag == "Pared")
+        {
+            isFloor = false;
+        }
      }
-    // void OnCollisionExit2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.tag == "Piso")
-    //     {
-    //         isFloor = false;
-    //     }
-    // }
+
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
@@ -153,7 +151,6 @@ public class PlayerScript : MonoBehaviour
             else{
                 spr.flipX = false;
             }
-            //transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         }
     }
 }

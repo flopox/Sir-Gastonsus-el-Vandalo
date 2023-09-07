@@ -35,6 +35,17 @@ public class GameManager : MonoBehaviour
 
         hud.DesactivarVidas(vidas);
     }
+        public void PerderVidasFosa()
+    {
+        vidas -= 5;
+
+        if(vidas == 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        hud.DesactivarVidas(vidas);
+    }
 
     public bool RecuperarVidas()
     {
