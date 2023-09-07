@@ -10,7 +10,7 @@ public class VictoriaEnJuego : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene("Victoria");
+            SceneManager.LoadScene("Victoria LVL1");
         }
     }
 
