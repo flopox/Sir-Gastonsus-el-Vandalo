@@ -14,4 +14,22 @@ public class VictoriaEnJuego : MonoBehaviour
         }
     }
 
+
 }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
