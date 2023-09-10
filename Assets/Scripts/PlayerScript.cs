@@ -27,6 +27,8 @@ public class PlayerScript : MonoBehaviour
 
     private bool mirandoDerecha;
 
+    [SerializeField] private ParticleSystem Particulas;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Piso")
@@ -57,6 +59,7 @@ public class PlayerScript : MonoBehaviour
         isLeft = true;
         anim.SetTrigger("run");
         spr.flipX = true;
+        Particulas.Play();
     }
 
     public void releaseLeft()
@@ -70,6 +73,7 @@ public class PlayerScript : MonoBehaviour
         isRight = true;
         anim.SetTrigger("run");
         spr.flipX = false;
+        Particulas.Play();
     }
 
     public void releaseRight()
@@ -84,7 +88,9 @@ public class PlayerScript : MonoBehaviour
         {
             isFloor = false;
             isJumping = true;
+            Particulas.Play();
         }
+        
     }
 
     private void Awake()
@@ -111,11 +117,13 @@ public class PlayerScript : MonoBehaviour
             // audioManager.ReproducirSonido(sonidoMovimiento);
         }
 
+        
         if (isJumping)
         {
             isJumping = false;
             rb.AddForce(Vector2.up * salto, ForceMode2D.Impulse);
             audioManager.ReproducirSonido(sonidoSalto);
+        
         }
     }
 
