@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6147463585165276524}
   - component: {fileID: 2866053796379938100}
   - component: {fileID: 2866053796379938056}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Primer enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 2866053796379938101}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 496, y: 65, z: 0}
-  m_LocalScale: {x: 58.108753, y: 56.37377, z: 1}
+  m_LocalPosition: {x: 496, y: 65, z: 1}
+  m_LocalScale: {x: 58.108753, y: 56.37377, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
