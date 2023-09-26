@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
-    public string nombreDeLaEscenaACargar = "Nivel2"; // Nombre de la escena que deseas cargar
+    public string nombreDeLaEscenaACargar = "Nivel1"; // Nombre de la escena que deseas cargar
 
     public void Jugar()
     {

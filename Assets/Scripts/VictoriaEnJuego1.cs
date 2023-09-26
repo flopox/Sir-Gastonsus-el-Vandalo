@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class victoria : MonoBehaviour
+public class VictoriaEnJuego1 : MonoBehaviour
 {
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,4 +14,22 @@ public class victoria : MonoBehaviour
         }
     }
 
+
 }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
